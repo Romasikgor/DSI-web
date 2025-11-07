@@ -1,4 +1,4 @@
-/* alert("Вітаю на нашому сайті!");
+/alert("Вітаю на нашому сайті!");
 let years = prompt("Скільки вам років?", 18);
 if (years >= 18) {
     let zgoda = confirm("Чи погоджуєтеся ви з вимогами сайту?");
@@ -10,8 +10,6 @@ if (years >= 18) {
 } else {
     alert("На жаль вам не можна перебувати на цьому сайті :(")
 }
-
- */
 
 let button = document.querySelector("button");
 
