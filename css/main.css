@@ -317,3 +317,21 @@ header {
 }
 
 /* #endregion */
+
+
+/* #region pidkazka */
+.main_div {
+    position: relative;
+}
+
+.hint {
+    display: none;
+    position: absolute;
+    background: rgb(185, 173, 173);
+    color: rgb(126, 85, 85);
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 5px;
+    width: 90px;
+}
+/* #endregion */

@@ -1,4 +1,5 @@
-/alert("Вітаю на нашому сайті!");
+// Вспливаючі вікна!
+alert("Вітаю на нашому сайті!");
 let years = prompt("Скільки вам років?", 18);
 if (years >= 18) {
     let zgoda = confirm("Чи погоджуєтеся ви з вимогами сайту?");
@@ -11,16 +12,44 @@ if (years >= 18) {
     alert("На жаль вам не можна перебувати на цьому сайті :(")
 }
 
-let button = document.querySelector("button");
+// Наведення на кнопки
+let button = document.querySelectorAll("button");
 
-button.onmouseover = function () {
-    button.style.backgroundColor = "#c7a9a9ff"
-}
+button.forEach(function (item) {
+    item.onmouseover = function () {
+        item.style.backgroundColor = "#c7a9a9ff"
+    };
 
-button.onmouseout = function () {
-    button.style.backgroundColor = "#EE4248"
-}
+    item.onmouseout = function () {
+        item.style.backgroundColor = "#EE4248"
+    };
 
-button.onclick = function () {
-    button.style.backgroundColor = "#996363ff";
-};
+    item.onclick = function () {
+        item.style.backgroundColor = "#996363ff";
+    };
+});
+
+
+// Наведення на логотип (Підсказка)
+let logoField = document.querySelectorAll(".logo");
+
+logoField.forEach(function (item) {
+    let helpField = item.nextElementSibling;
+    item.onmouseenter = function () {
+        helpField.style.display = "block";
+    };
+
+    item.onmousemove = function (e) {
+        helpField.style.left = e.offsetX + "px";
+        helpField.style.top = e.offsetY + "px";
+    };
+
+    item.onmouseleave = function () {
+        helpField.style.display = "none";
+    };
+});
+
+
+
+
+
